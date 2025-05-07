@@ -108,7 +108,7 @@ echo #define _SEMVER_CORE "%MAJOR%.%MINOR%.%PATCH%">>!FILE!
 echo #define _SEMVER_BUILD "%MAJOR%.%MINOR%.%PATCH%+%BUILD%">>!FILE!
 set TMP=%BUILD%
 if defined GITHASH (
-  echo #define _SEMVER_GITHASH "%MAJOR%.%MINOR%.%PATCH%+%GITHASH%">>!FILE!
+  echo #define _SEMVER_GITHASH "%MAJOR%.%MINOR%.%PATCH%-%BUILD%+%GITHASH%">>!FILE!
   set TMP=%GITHASH%
 ) 
 if defined PRERELEASE (
